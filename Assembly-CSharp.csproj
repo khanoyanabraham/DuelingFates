@@ -62,10 +62,27 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\DuelingFates\ApplicationManagement\DuelingFatesApplicationManager.cs" />
+    <Compile Include="Assets\DuelingFates\ScreenManagement\IScreen.cs" />
+    <Compile Include="Assets\DuelingFates\ScreenManagement\IScreenController.cs" />
     <Compile Include="Assets\DuelingFates\ScreenManagement\IScreenManager.cs" />
+    <Compile Include="Assets\DuelingFates\ScreenManagement\IScreenModel.cs" />
+    <Compile Include="Assets\DuelingFates\ScreenManagement\IScreenView.cs" />
+    <Compile Include="Assets\DuelingFates\ScreenManagement\MvcSignals\SignalAction.cs" />
+    <Compile Include="Assets\DuelingFates\ScreenManagement\MvcSignals\SignalActionT.cs" />
     <Compile Include="Assets\DuelingFates\ScreenManagement\ScreenBase.cs" />
-    <Reference Include="UnityEngine">
-      <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.2f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
+    <Compile Include="Assets\DuelingFates\ScreenManagement\ScreenManager.cs" />
+    <Compile Include="Assets\DuelingFates\ScreenManagement\SignalRegistrator.cs" />
+    <Compile Include="Assets\DuelingFates\Screens\MainScreen.cs" />
+    <Compile Include="Assets\DuelingFates\Screens\MainScreenController.cs" />
+    <Compile Include="Assets\DuelingFates\Screens\MainScreenModel.cs" />
+    <Compile Include="Assets\DuelingFates\Screens\MainScreenView.cs" />
+    <Compile Include="Assets\DuelingFates\Screens\ScreenHandler.cs" />
+    <Compile Include="Assets\DuelingFates\Screens\ScreenHandlerController.cs" />
+    <Compile Include="Assets\DuelingFates\Screens\ScreenHandlerModel.cs" />
+    <Compile Include="Assets\DuelingFates\Screens\ScreenHandlerView.cs" />
+    <Reference Include="Unity.Timeline.Editor">
+      <HintPath>C:/Users/devpc/Desktop/MyProject/DuelingFates/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.2f1/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
