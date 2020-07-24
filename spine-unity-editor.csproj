@@ -11,10 +11,10 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{F913A613-607B-1F25-CEBD-3804231676C5}</ProjectGuid>
+    <ProjectGuid>{98961194-75B3-618C-3547-59A2331EB3A4}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <AssemblyName>Zenject-Editor</AssemblyName>
+    <AssemblyName>spine-unity-editor</AssemblyName>
     <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <BaseDirectory>.</BaseDirectory>
@@ -49,7 +49,7 @@
   <PropertyGroup>
     <ProjectTypeGuids>{E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <UnityProjectGenerator>Unity/VSTU</UnityProjectGenerator>
-    <UnityProjectType>Editor:5</UnityProjectType>
+    <UnityProjectType>Game:1</UnityProjectType>
     <UnityBuildTarget>Android:13</UnityBuildTarget>
     <UnityVersion>2019.4.2f1</UnityVersion>
   </PropertyGroup>
@@ -62,21 +62,50 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Plugins\Zenject\Source\Editor\EditorStaticInstaller.cs" />
-    <Compile Include="Assets\Plugins\Zenject\Source\Editor\EditorWindow\ZenjectEditorWindow.cs" />
-    <Compile Include="Assets\Plugins\Zenject\Source\Editor\Editors\ContextEditor.cs" />
-    <Compile Include="Assets\Plugins\Zenject\Source\Editor\Editors\GameObjectContextEditor.cs" />
-    <Compile Include="Assets\Plugins\Zenject\Source\Editor\Editors\ProjectContextEditor.cs" />
-    <Compile Include="Assets\Plugins\Zenject\Source\Editor\Editors\RunnableContextEditor.cs" />
-    <Compile Include="Assets\Plugins\Zenject\Source\Editor\Editors\SceneContextEditor.cs" />
-    <Compile Include="Assets\Plugins\Zenject\Source\Editor\Editors\SceneDecoratorContextEditor.cs" />
-    <Compile Include="Assets\Plugins\Zenject\Source\Editor\ObjectGraphVisualizer.cs" />
-    <Compile Include="Assets\Plugins\Zenject\Source\Editor\SceneParentLoading\DefaultSceneContractConfig.cs" />
-    <Compile Include="Assets\Plugins\Zenject\Source\Editor\SceneParentLoading\SceneParentAutomaticLoader.cs" />
-    <Compile Include="Assets\Plugins\Zenject\Source\Editor\UnityInspectorListEditor.cs" />
-    <Compile Include="Assets\Plugins\Zenject\Source\Editor\ZenMenuItems.cs" />
-    <Compile Include="Assets\Plugins\Zenject\Source\Editor\ZenUnityEditorUtil.cs" />
-    <None Include="Assets\Plugins\Zenject\Source\Editor\Zenject-Editor.asmdef" />
+    <Compile Include="Assets\Spine\Editor\spine-unity\Editor\Asset Types\AnimationReferenceAssetEditor.cs" />
+    <Compile Include="Assets\Spine\Editor\spine-unity\Editor\Asset Types\SkeletonDataAssetInspector.cs" />
+    <Compile Include="Assets\Spine\Editor\spine-unity\Editor\Asset Types\SpineAtlasAssetInspector.cs" />
+    <Compile Include="Assets\Spine\Editor\spine-unity\Editor\Asset Types\SpineSpriteAtlasAssetInspector.cs" />
+    <Compile Include="Assets\Spine\Editor\spine-unity\Editor\Components\BoneFollowerGraphicInspector.cs" />
+    <Compile Include="Assets\Spine\Editor\spine-unity\Editor\Components\BoneFollowerInspector.cs" />
+    <Compile Include="Assets\Spine\Editor\spine-unity\Editor\Components\BoundingBoxFollowerInspector.cs" />
+    <Compile Include="Assets\Spine\Editor\spine-unity\Editor\Components\PointFollowerInspector.cs" />
+    <Compile Include="Assets\Spine\Editor\spine-unity\Editor\Components\SkeletonAnimationInspector.cs" />
+    <Compile Include="Assets\Spine\Editor\spine-unity\Editor\Components\SkeletonGraphicCustomMaterialsInspector.cs" />
+    <Compile Include="Assets\Spine\Editor\spine-unity\Editor\Components\SkeletonGraphicInspector.cs" />
+    <Compile Include="Assets\Spine\Editor\spine-unity\Editor\Components\SkeletonMecanimInspector.cs" />
+    <Compile Include="Assets\Spine\Editor\spine-unity\Editor\Components\SkeletonMecanimRootMotionInspector.cs" />
+    <Compile Include="Assets\Spine\Editor\spine-unity\Editor\Components\SkeletonRendererCustomMaterialsInspector.cs" />
+    <Compile Include="Assets\Spine\Editor\spine-unity\Editor\Components\SkeletonRendererInspector.cs" />
+    <Compile Include="Assets\Spine\Editor\spine-unity\Editor\Components\SkeletonRootMotionBaseInspector.cs" />
+    <Compile Include="Assets\Spine\Editor\spine-unity\Editor\Components\SkeletonRootMotionInspector.cs" />
+    <Compile Include="Assets\Spine\Editor\spine-unity\Editor\Components\SkeletonUtilityBoneInspector.cs" />
+    <Compile Include="Assets\Spine\Editor\spine-unity\Editor\Components\SkeletonUtilityInspector.cs" />
+    <Compile Include="Assets\Spine\Editor\spine-unity\Editor\Menus.cs" />
+    <Compile Include="Assets\Spine\Editor\spine-unity\Editor\Shaders\SpineShaderWithOutlineGUI.cs" />
+    <Compile Include="Assets\Spine\Editor\spine-unity\Editor\Shaders\SpineSpriteShaderGUI.cs" />
+    <Compile Include="Assets\Spine\Editor\spine-unity\Editor\SpineAttributeDrawers.cs" />
+    <Compile Include="Assets\Spine\Editor\spine-unity\Editor\Utility\AssetDatabaseAvailabilityDetector.cs" />
+    <Compile Include="Assets\Spine\Editor\spine-unity\Editor\Utility\AssetUtility.cs" />
+    <Compile Include="Assets\Spine\Editor\spine-unity\Editor\Utility\BuildSettings.cs" />
+    <Compile Include="Assets\Spine\Editor\spine-unity\Editor\Utility\DataReloadHandler.cs" />
+    <Compile Include="Assets\Spine\Editor\spine-unity\Editor\Utility\Icons.cs" />
+    <Compile Include="Assets\Spine\Editor\spine-unity\Editor\Utility\Instantiation.cs" />
+    <Compile Include="Assets\Spine\Editor\spine-unity\Editor\Utility\Preferences.cs" />
+    <Compile Include="Assets\Spine\Editor\spine-unity\Editor\Utility\SpineEditorUtilities.cs" />
+    <Compile Include="Assets\Spine\Editor\spine-unity\Editor\Utility\SpineHandles.cs" />
+    <Compile Include="Assets\Spine\Editor\spine-unity\Editor\Utility\SpineInspectorUtility.cs" />
+    <Compile Include="Assets\Spine\Editor\spine-unity\Editor\Utility\SpineMaskUtilities.cs" />
+    <Compile Include="Assets\Spine\Editor\spine-unity\Editor\Windows\SkeletonBaker.cs" />
+    <Compile Include="Assets\Spine\Editor\spine-unity\Editor\Windows\SkeletonBakingWindow.cs" />
+    <Compile Include="Assets\Spine\Editor\spine-unity\Editor\Windows\SkeletonDebugWindow.cs" />
+    <Compile Include="Assets\Spine\Editor\spine-unity\Editor\Windows\SpinePreferences.cs" />
+    <Compile Include="Assets\Spine\Editor\spine-unity\Editor\Windows\SpriteAtlasImportWindow.cs" />
+    <Compile Include="Assets\Spine\Editor\spine-unity\Modules\SkeletonRenderSeparator\Editor\SkeletonPartsRendererInspector.cs" />
+    <Compile Include="Assets\Spine\Editor\spine-unity\Modules\SkeletonRenderSeparator\Editor\SkeletonRenderSeparatorInspector.cs" />
+    <Compile Include="Assets\Spine\Editor\spine-unity\Modules\SlotBlendModes\Editor\SlotBlendModesEditor.cs" />
+    <None Include="Assets\Spine\Editor\spine-unity-editor.asmdef" />
+    <None Include="Assets\Spine\Editor\spine-unity\Editor\Resources\SpineAssetDatabaseMarker.txt" />
     <Reference Include="UnityEngine">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.2f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
@@ -661,9 +690,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="Zenject.csproj">
-      <Project>{9D2297B0-D6AD-3A49-F313-B7D3ABCB9288}</Project>
-      <Name>Zenject</Name>
+    <ProjectReference Include="spine-unity.csproj">
+      <Project>{F7755FA5-0734-6406-7E59-7C4B8B4FA051}</Project>
+      <Name>spine-unity</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
